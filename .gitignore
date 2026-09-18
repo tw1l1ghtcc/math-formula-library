@@ -1,0 +1,15 @@
+# 操作系统和编辑器文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.tmp
+
+# 本地备份与临时工作文件
+backups/
+work/
+node_modules/
+.env
+.env.*

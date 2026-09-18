@@ -1,0 +1,1763 @@
+{
+  "version": 1,
+  "formulas": [
+    {
+      "id": "builtin-31",
+      "name": "第一重要极限",
+      "category": "极限与连续",
+      "formula": "lim(x→0) sin x / x = 1",
+      "description": "三角函数的角必须以弧度计。常用于 0/0 型极限。",
+      "symbols": "x：趋于 0 的实变量。",
+      "example": "lim(x→0) sin(3x)/x = 3。",
+      "tags": [
+        "高数",
+        "极限",
+        "三角函数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-32",
+      "name": "第二重要极限",
+      "category": "极限与连续",
+      "formula": "lim(x→0) (1 + x)^(1/x) = e\nlim(n→∞) (1 + 1/n)ⁿ = e",
+      "description": "第一式在 1+x>0 的邻域内使用；第二式 n 为正整数。",
+      "symbols": "e：自然对数的底数。",
+      "example": "lim(n→∞) (1 + 2/n)ⁿ = e²。",
+      "tags": [
+        "高数",
+        "极限",
+        "指数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-33",
+      "name": "等价无穷小：三角与反三角",
+      "category": "极限与连续",
+      "formula": "sin x ∼ x；tan x ∼ x\narcsin x ∼ x；arctan x ∼ x",
+      "description": "x→0 时成立，角使用弧度。适合在乘除结构中替换；加减结构中直接替换可能丢失高阶项。",
+      "symbols": "u∼v 表示 u/v→1。",
+      "example": "lim(x→0) tan(2x)/sin(3x) = 2/3。",
+      "tags": [
+        "高数",
+        "极限",
+        "等价无穷小"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-34",
+      "name": "等价无穷小：指数与对数",
+      "category": "极限与连续",
+      "formula": "eˣ − 1 ∼ x；ln(1 + x) ∼ x\naˣ − 1 ∼ x ln a",
+      "description": "x→0 时成立；a>0 且 a≠1。对数的真数须为正。",
+      "symbols": "∼：比值趋于 1。",
+      "example": "lim(x→0) ln(1+2x)/(e³ˣ−1) = 2/3。",
+      "tags": [
+        "高数",
+        "等价无穷小",
+        "对数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-35",
+      "name": "等价无穷小：余弦与幂",
+      "category": "极限与连续",
+      "formula": "1 − cos x ∼ x²/2\n(1 + x)^α − 1 ∼ αx",
+      "description": "x→0；第二式要求固定实数 α≠0，且 1+x>0。",
+      "symbols": "α：固定实数；角使用弧度。",
+      "example": "lim(x→0) (1−cos x)/x² = 1/2。",
+      "tags": [
+        "高数",
+        "等价无穷小"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-36",
+      "name": "夹逼定理",
+      "category": "极限与连续",
+      "formula": "g(x) ≤ f(x) ≤ h(x)\ng(x)→L 且 h(x)→L ⇒ f(x)→L",
+      "description": "不等式须在趋近点的某个去心邻域内成立。对数列也有对应结论。",
+      "symbols": "L：共同极限。",
+      "example": "−x²≤x²sin(1/x)≤x²，所以其在 0 处极限为 0。",
+      "tags": [
+        "高数",
+        "极限",
+        "夹逼"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-37",
+      "name": "洛必达法则：0/0 型",
+      "category": "极限与连续",
+      "formula": "lim f(x)/g(x) = lim f′(x)/g′(x)",
+      "description": "f、g 在趋近点的一侧去心邻域可导，g′≠0，f→0、g→0，且导数之比的极限存在（允许无穷）。结论对应同一趋近方向。不能直接用于非未定式。",
+      "symbols": "′：对同一变量求导。",
+      "example": "lim(x→0) (eˣ−1)/x = lim(x→0) eˣ = 1。",
+      "tags": [
+        "高数",
+        "极限",
+        "洛必达",
+        "LHospital"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-38",
+      "name": "洛必达法则：∞/∞ 型",
+      "category": "极限与连续",
+      "formula": "lim f(x)/g(x) = lim f′(x)/g′(x)",
+      "description": "在相应单侧去心邻域或无穷远区间，f、g 可导，g′≠0；|f|、|g| 均趋于无穷，且导数之比的极限存在（允许无穷）。",
+      "symbols": "极限必须满足无穷比无穷的未定式条件。",
+      "example": "lim(x→+∞) ln x / x = lim(x→+∞) 1/x = 0。",
+      "tags": [
+        "高数",
+        "极限",
+        "洛必达"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-39",
+      "name": "幂指函数极限转换",
+      "category": "极限与连续",
+      "formula": "u(x)^v(x) = exp[v(x) ln u(x)]",
+      "description": "u(x)>0。用于 1^∞、0⁰、∞⁰ 型极限，先求 v ln u 的极限，再取指数。",
+      "symbols": "exp t=eᵗ；ln 为自然对数。",
+      "example": "lim(x→0) (cos x)^(1/x²) = e^(−1/2)。",
+      "tags": [
+        "高数",
+        "极限",
+        "幂指函数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-40",
+      "name": "数列单调有界定理",
+      "category": "极限与连续",
+      "formula": "单调递增且有上界 ⇒ 收敛\n单调递减且有下界 ⇒ 收敛",
+      "description": "适用于实数数列；有界须提供统一的界。",
+      "symbols": "数列极限可通过递推式与连续性进一步求得。",
+      "example": "aₙ=1−1/n 单调递增、上界为 1，因此收敛于 1。",
+      "tags": [
+        "高数",
+        "数列",
+        "单调有界"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-41",
+      "name": "柯西收敛准则：数列",
+      "category": "极限与连续",
+      "formula": "∀ε>0，∃N，m,n≥N ⇒ |aₘ−aₙ|<ε",
+      "description": "实数数列收敛当且仅当满足该准则；不要求事先知道极限值。",
+      "symbols": "ε：任意正数；N：依赖于 ε 的正整数。",
+      "example": "aₙ=1/n 满足该条件，故是柯西数列。",
+      "tags": [
+        "高数",
+        "柯西",
+        "Cauchy",
+        "收敛准则"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-42",
+      "name": "函数连续的判定",
+      "category": "极限与连续",
+      "formula": "lim(x→a) f(x) = f(a)",
+      "description": "f 在 a 处有定义；内点检查双侧极限，定义域端点检查相应单侧极限。",
+      "symbols": "连续要求极限存在且等于函数值。",
+      "example": "把 sin x/x 在 x=0 处补定义为 1，可得到连续函数。",
+      "tags": [
+        "高数",
+        "连续",
+        "极限"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-43",
+      "name": "介值定理与零点定理",
+      "category": "极限与连续",
+      "formula": "f 连续于 [a,b] ⇒ 取得 f(a)、f(b) 之间所有值\nf(a)f(b)<0 ⇒ ∃ξ∈(a,b)，f(ξ)=0",
+      "description": "f在[a,b]连续且a<b。介值定理保证取得端点值之间的所有值；零点结论还要求f(a)f(b)<0，保证存在但不保证唯一。",
+      "symbols": "ξ：区间内某点。",
+      "example": "f(x)=x³−x−1 在 [1,2] 上连续，且端点异号，故区间内有零点。",
+      "tags": [
+        "高数",
+        "连续",
+        "零点",
+        "介值"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-44",
+      "name": "无穷小阶的比较",
+      "category": "极限与连续",
+      "formula": "f=o(g) ⇔ f/g→0\nf∼g ⇔ f/g→1",
+      "description": "在同一趋近过程比较，分母 g 在足够接近的去心邻域不为零。",
+      "symbols": "o(g)：比 g 更高阶的无穷小。",
+      "example": "x²=o(x)，sin x∼x（x→0）。",
+      "tags": [
+        "高数",
+        "极限",
+        "高阶无穷小"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-45",
+      "name": "连续函数的闭区间性质",
+      "category": "极限与连续",
+      "formula": "f∈C[a,b] ⇒ 有界且取得最大值、最小值",
+      "description": "要求实函数在有限闭区间上连续；开区间或有间断时不能直接使用。",
+      "symbols": "C[a,b]：在 [a,b] 上连续的函数集合。",
+      "example": "f(x)=x² 在 [−1,2] 的最小值为 0，最大值为 4。",
+      "tags": [
+        "高数",
+        "连续",
+        "最值"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-46",
+      "name": "导数的定义",
+      "category": "导数与微分",
+      "formula": "f′(a) = lim(h→0) [f(a+h)−f(a)]/h",
+      "description": "双侧差商极限存在且有限时，f 在内点 a 可导。可导必连续，连续未必可导。",
+      "symbols": "h：自变量增量。",
+      "example": "|x| 在 0 连续，但左右导数分别为 −1、1，故不可导。",
+      "tags": [
+        "高数",
+        "导数",
+        "定义"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-47",
+      "name": "基本初等函数导数表",
+      "category": "导数与微分",
+      "formula": "(eˣ)′=eˣ；(aˣ)′=aˣ ln a\n(ln|x|)′=1/x；(logₐx)′=1/(x ln a)",
+      "description": "a>0，a≠1；ln|x| 要求 x≠0，logₐx 要求 x>0。",
+      "symbols": "ln：自然对数。",
+      "example": "[ln(3x)]′=1/x（x>0）。",
+      "tags": [
+        "高数",
+        "导数",
+        "指数",
+        "对数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-48",
+      "name": "三角函数导数表",
+      "category": "导数与微分",
+      "formula": "(sin x)′=cos x；(cos x)′=−sin x\n(tan x)′=sec²x；(cot x)′=−csc²x",
+      "description": "角使用弧度。tan 要求 cos x≠0，cot 要求 sin x≠0。",
+      "symbols": "sec x=1/cos x；csc x=1/sin x。",
+      "example": "(tan 2x)′=2sec²(2x)。",
+      "tags": [
+        "高数",
+        "导数",
+        "三角函数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-49",
+      "name": "反三角函数导数表",
+      "category": "导数与微分",
+      "formula": "(arcsin x)′=1/√(1−x²)\n(arccos x)′=−1/√(1−x²)\n(arctan x)′=1/(1+x²)",
+      "description": "arcsin、arccos 的导数公式要求 |x|<1；arctan 对所有实数成立。",
+      "symbols": "反三角函数取通常的主值。",
+      "example": "[arctan(2x)]′=2/(1+4x²)。",
+      "tags": [
+        "高数",
+        "导数",
+        "反三角函数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-50",
+      "name": "商的求导法则",
+      "category": "导数与微分",
+      "formula": "(u/v)′ = (u′v−uv′)/v²",
+      "description": "u、v 在所求点可导且 v≠0。",
+      "symbols": "u、v：同一变量的函数。",
+      "example": "[sin x/x]′=(x cos x−sin x)/x²（x≠0）。",
+      "tags": [
+        "高数",
+        "导数",
+        "商法则"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-51",
+      "name": "隐函数求导",
+      "category": "导数与微分",
+      "formula": "F(x,y)=0 ⇒ dy/dx=−Fₓ/Fᵧ",
+      "description": "F 在点的邻域有连续一阶偏导，且 Fᵧ≠0，此时局部可解为 y(x)。",
+      "symbols": "Fₓ、Fᵧ：关于 x、y 的偏导。",
+      "example": "x²+y²=1，y≠0 时 y′=−x/y。",
+      "tags": [
+        "高数",
+        "导数",
+        "隐函数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-52",
+      "name": "参数方程求导",
+      "category": "导数与微分",
+      "formula": "dy/dx = y′(t)/x′(t)\nd²y/dx² = [d/dt(y′/x′)]/x′",
+      "description": "x=x(t)、y=y(t) 在相应阶数可导，且 x′(t)≠0。",
+      "symbols": "t：参数；第二式须存在所需二阶导数。",
+      "example": "x=t²、y=t³，t≠0 时 dy/dx=3t/2，二阶导数为 3/(4t)。",
+      "tags": [
+        "高数",
+        "导数",
+        "参数方程"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-53",
+      "name": "反函数求导",
+      "category": "导数与微分",
+      "formula": "(f⁻¹)′(y₀)=1/f′(x₀)，y₀=f(x₀)",
+      "description": "f 局部严格单调且连续，x₀ 处可导，f′(x₀)≠0；f⁻¹ 表示反函数，不是倒数。",
+      "symbols": "x₀、y₀：对应的自变量和函数值。",
+      "example": "ln x 是 eˣ 的反函数，因此 (ln x)′=1/x。",
+      "tags": [
+        "高数",
+        "导数",
+        "反函数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-54",
+      "name": "对数求导法",
+      "category": "导数与微分",
+      "formula": "y>0 ⇒ y′=y·(ln y)′",
+      "description": "用于变量底数、变量指数或乘积较复杂的函数。y≠0 时也可用 ln|y|。",
+      "symbols": "求 ln y 的导数后再乘回 y。",
+      "example": "y=xˣ（x>0），则 y′=xˣ(ln x+1)。",
+      "tags": [
+        "高数",
+        "导数",
+        "对数求导"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-55",
+      "name": "莱布尼茨高阶乘积求导",
+      "category": "导数与微分",
+      "formula": "(uv)⁽ⁿ⁾ = Σ(k=0…n) C(n,k)u⁽ᵏ⁾v⁽ⁿ⁻ᵏ⁾",
+      "description": "u、v 具有所需的 n 阶导数，n 为非负整数。",
+      "symbols": "C(n,k)=n!/[k!(n−k)!]；零阶导数表示函数本身。",
+      "example": "(uv)″=u″v+2u′v′+uv″。",
+      "tags": [
+        "高数",
+        "高阶导数",
+        "莱布尼茨",
+        "Leibniz"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-56",
+      "name": "一元函数微分与线性近似",
+      "category": "导数与微分",
+      "formula": "dy=f′(x)dx\nf(x+Δx)=f(x)+f′(x)Δx+o(Δx)",
+      "description": "f 在 x 处可导；线性近似用于 Δx 足够小的情形。",
+      "symbols": "dx=Δx；dy 为函数增量的线性主部。",
+      "example": "√(4.04)≈2+(1/4)×0.04=2.01。",
+      "tags": [
+        "高数",
+        "微分",
+        "近似"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-57",
+      "name": "切线与法线方程",
+      "category": "导数与微分",
+      "formula": "切线：y−y₀=f′(x₀)(x−x₀)\n法线：y−y₀=−(x−x₀)/f′(x₀)",
+      "description": "y₀=f(x₀)，f 在 x₀ 可导。法线斜率公式要求 f′(x₀)≠0；导数为 0 时法线为 x=x₀。",
+      "symbols": "(x₀,y₀)：曲线上所求点。",
+      "example": "y=x² 在 (1,1) 的切线为 y−1=2(x−1)。",
+      "tags": [
+        "高数",
+        "导数",
+        "切线",
+        "法线"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-58",
+      "name": "费马驻点定理",
+      "category": "中值定理与不等式",
+      "formula": "内点局部极值且可导 ⇒ f′(x₀)=0",
+      "description": "这是可导内点取得极值的必要条件，不是充分条件；不可导点和端点须另行检查。",
+      "symbols": "x₀：定义域内点。",
+      "example": "f(x)=x³ 在 0 处导数为 0，但没有极值。",
+      "tags": [
+        "高数",
+        "极值",
+        "费马",
+        "Fermat"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-59",
+      "name": "罗尔定理",
+      "category": "中值定理与不等式",
+      "formula": "f(a)=f(b) ⇒ ∃ξ∈(a,b)，f′(ξ)=0",
+      "description": "f 在 [a,b] 连续、在 (a,b) 可导，且 a<b。",
+      "symbols": "ξ：区间内至少一个点。",
+      "example": "f(x)=x²−1 在 [−1,1] 上满足条件，ξ=0。",
+      "tags": [
+        "高数",
+        "中值定理",
+        "罗尔",
+        "Rolle"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-60",
+      "name": "拉格朗日中值定理",
+      "category": "中值定理与不等式",
+      "formula": "f(b)−f(a)=f′(ξ)(b−a)",
+      "description": "f 在 [a,b] 连续、在 (a,b) 可导，a<b，则存在 ξ∈(a,b)。",
+      "symbols": "平均变化率等于区间内某点的导数。",
+      "example": "f=x²，区间 [1,3]，平均变化率为 4，对应 ξ=2。",
+      "tags": [
+        "高数",
+        "中值定理",
+        "拉格朗日",
+        "Lagrange"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-61",
+      "name": "柯西中值定理",
+      "category": "中值定理与不等式",
+      "formula": "[f(b)−f(a)]g′(ξ)=[g(b)−g(a)]f′(ξ)",
+      "description": "f、g 在 [a,b] 连续、在 (a,b) 可导，a<b，则存在 ξ∈(a,b)。若 g′ 在区间内处处非零，可写为增量之比等于导数之比。",
+      "symbols": "ξ：同一个区间内点；分式形式须检查分母非零。",
+      "example": "f=x²、g=x，在 [1,3] 上取 ξ=2。",
+      "tags": [
+        "高数",
+        "柯西",
+        "Cauchy",
+        "中值定理"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-62",
+      "name": "积分中值定理",
+      "category": "中值定理与不等式",
+      "formula": "∫ₐᵇ f(x)dx=f(ξ)(b−a)",
+      "description": "f 在 [a,b] 连续，a<b，则存在 ξ∈[a,b]。",
+      "symbols": "f(ξ)：函数在区间上的平均值。",
+      "example": "f=x² 在 [0,1] 上积分为 1/3，可取 ξ=1/√3。",
+      "tags": [
+        "高数",
+        "中值定理",
+        "积分"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-63",
+      "name": "柯西–施瓦茨不等式：离散型",
+      "category": "中值定理与不等式",
+      "formula": "(Σ aᵢbᵢ)² ≤ (Σ aᵢ²)(Σ bᵢ²)",
+      "description": "两组实数的求和指标均为 i=1,…,n。等号当且仅当两向量线性相关，含零向量情形。",
+      "symbols": "aᵢ、bᵢ：实数；又称柯西不等式。",
+      "example": "(1×3+2×4)²=121≤(1²+2²)(3²+4²)=125。",
+      "tags": [
+        "高数",
+        "柯西",
+        "施瓦茨",
+        "Cauchy",
+        "Schwarz",
+        "不等式"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-64",
+      "name": "柯西–施瓦茨不等式：积分型",
+      "category": "中值定理与不等式",
+      "formula": "[∫ₐᵇ f(x)g(x)dx]² ≤ [∫ₐᵇ f²dx][∫ₐᵇ g²dx]",
+      "description": "a<b，实函数 f、g 在该区间平方可积；连续函数是常见的充分条件。非零函数等号成立需两函数几乎处处成比例。",
+      "symbols": "平方可积指函数平方的积分有限。",
+      "example": "取 g=1： (∫₀¹ f dx)²≤∫₀¹ f²dx。",
+      "tags": [
+        "高数",
+        "柯西",
+        "Cauchy",
+        "Schwarz",
+        "积分不等式"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-65",
+      "name": "导数与单调性",
+      "category": "中值定理与不等式",
+      "formula": "f′>0 ⇒ 严格递增\nf′<0 ⇒ 严格递减",
+      "description": "在一个区间上可导；非严格不等式 f′≥0、f′≤0 对应单调不减、单调不增。",
+      "symbols": "导数条件应在整个所讨论的区间上成立。",
+      "example": "f=x³ 的导数 3x²≥0，所以单调不减；它实际上严格递增。",
+      "tags": [
+        "高数",
+        "导数",
+        "单调性"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-66",
+      "name": "二阶导数极值判别",
+      "category": "中值定理与不等式",
+      "formula": "f′(x₀)=0：\nf″(x₀)>0 ⇒ 严格局部极小\nf″(x₀)<0 ⇒ 严格局部极大",
+      "description": "f 在 x₀ 邻域二阶可导。若 f″(x₀)=0，结论不确定，须检查高阶项或导数变号。",
+      "symbols": "x₀：内点驻点。",
+      "example": "x² 在 0 的二阶导数为 2，所以有严格局部极小值。",
+      "tags": [
+        "高数",
+        "极值",
+        "二阶导数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-67",
+      "name": "算术–几何平均不等式",
+      "category": "中值定理与不等式",
+      "formula": "(a₁+…+aₙ)/n ≥ (a₁…aₙ)^(1/n)",
+      "description": "aᵢ 均为非负实数，n 为正整数；等号当且仅当各数相等。",
+      "symbols": "又称均值不等式，常用于最值估计。",
+      "example": "a,b>0 时 a/b+b/a≥2。",
+      "tags": [
+        "高数",
+        "不等式",
+        "均值",
+        "AMGM"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-68",
+      "name": "泰勒公式：拉格朗日余项",
+      "category": "泰勒展开",
+      "formula": "f(x)=Σ(k=0…n) f⁽ᵏ⁾(a)(x−a)ᵏ/k! + Rₙ\nRₙ=f⁽ⁿ⁺¹⁾(ξ)(x−a)ⁿ⁺¹/(n+1)!",
+      "description": "n 为非负整数。f 在 a 与 x 之间的闭区间有连续的 0 至 n 阶导数，开区间有 n+1 阶导数；ξ 位于 a 与 x 之间。",
+      "symbols": "a：展开点；k!：阶乘；f⁽⁰⁾=f。",
+      "example": "eˣ=1+x+x²/2+e^ξ·x³/6，其中 ξ 介于 0 与 x。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "Taylor",
+        "拉格朗日",
+        "余项"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-69",
+      "name": "泰勒公式：佩亚诺余项",
+      "category": "泰勒展开",
+      "formula": "f(x)=Σ(k=0…n) f⁽ᵏ⁾(a)(x−a)ᵏ/k! + o((x−a)ⁿ)",
+      "description": "x→a，n≥1；一个常用充分条件是 f 在 a 的邻域具有连续的 n 阶导数。用于局部展开和求极限。",
+      "symbols": "o((x−a)ⁿ)：除以 (x−a)ⁿ 后趋于 0 的余项。",
+      "example": "ln(1+x)=x−x²/2+x³/3+o(x³)。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "Taylor",
+        "佩亚诺",
+        "Peano",
+        "余项"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-70",
+      "name": "泰勒公式：积分余项",
+      "category": "泰勒展开",
+      "formula": "Rₙ(x)=1/n! · ∫ₐˣ f⁽ⁿ⁺¹⁾(t)(x−t)ⁿdt",
+      "description": "f 在 a 与 x 之间的区间有连续的 n+1 阶导数。Rₙ 是 n 阶泰勒多项式后的余项。",
+      "symbols": "t：积分变量；n 为非负整数。",
+      "example": "n=0 时 f(x)−f(a)=∫ₐˣ f′(t)dt。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "Taylor",
+        "积分余项"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-71",
+      "name": "麦克劳林公式",
+      "category": "泰勒展开",
+      "formula": "f(x)=f(0)+f′(0)x+f″(0)x²/2!+…+f⁽ⁿ⁾(0)xⁿ/n!+Rₙ",
+      "description": "是展开点 a=0 的泰勒公式；余项与相应版本的可导条件配套使用。无限展开还需证明余项趋于 0。",
+      "symbols": "Rₙ：截断误差；麦克劳林也写作 Maclaurin。",
+      "example": "cos x=1−x²/2+x⁴/24+o(x⁴)。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "麦克劳林",
+        "Maclaurin"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-72",
+      "name": "指数函数泰勒级数",
+      "category": "泰勒展开",
+      "formula": "eˣ=Σ(n=0…∞) xⁿ/n!\n=1+x+x²/2!+x³/3!+…",
+      "description": "对所有实数 x 收敛并等于 eˣ。",
+      "symbols": "n!：阶乘，0!=1。",
+      "example": "eˣ−1−x∼x²/2（x→0）。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "指数函数",
+        "展开"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-73",
+      "name": "正弦函数泰勒级数",
+      "category": "泰勒展开",
+      "formula": "sin x=Σ(n=0…∞) (−1)ⁿx²ⁿ⁺¹/(2n+1)!\n=x−x³/3!+x⁵/5!−…",
+      "description": "对所有实数 x 成立，角使用弧度。",
+      "symbols": "展开点为 0，只有奇次幂。",
+      "example": "lim(x→0) (sin x−x)/x³=−1/6。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "正弦",
+        "展开"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-74",
+      "name": "余弦函数泰勒级数",
+      "category": "泰勒展开",
+      "formula": "cos x=Σ(n=0…∞) (−1)ⁿx²ⁿ/(2n)!\n=1−x²/2!+x⁴/4!−…",
+      "description": "对所有实数 x 成立，角使用弧度。",
+      "symbols": "展开点为 0，只有偶次幂。",
+      "example": "lim(x→0) (cos x−1+x²/2)/x⁴=1/24。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "余弦",
+        "展开"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-75",
+      "name": "自然对数泰勒级数",
+      "category": "泰勒展开",
+      "formula": "ln(1+x)=Σ(n=1…∞) (−1)ⁿ⁻¹xⁿ/n\n=x−x²/2+x³/3−…",
+      "description": "−1<x≤1 时成立；|x|<1 时绝对收敛，x=1 时条件收敛，x=−1 不可代入。",
+      "symbols": "展开点为 0。",
+      "example": "ln 2=1−1/2+1/3−1/4+…。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "对数",
+        "展开"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-76",
+      "name": "二项式泰勒级数",
+      "category": "泰勒展开",
+      "formula": "(1+x)^α=Σ(n=0…∞) C(α,n)xⁿ\n=1+αx+α(α−1)x²/2!+…",
+      "description": "α 为实数，|x|<1；若 α 为非负整数，则截断为多项式，对所有实数 x 成立。",
+      "symbols": "C(α,n)=α(α−1)…(α−n+1)/n!；C(α,0)=1。",
+      "example": "√(1+x)=1+x/2−x²/8+o(x²)。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "二项式",
+        "展开"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-77",
+      "name": "反正切泰勒级数",
+      "category": "泰勒展开",
+      "formula": "arctan x=Σ(n=0…∞) (−1)ⁿx²ⁿ⁺¹/(2n+1)\n=x−x³/3+x⁵/5−…",
+      "description": "|x|≤1 时成立；端点条件收敛，区间内部绝对收敛。",
+      "symbols": "arctan 取主值，角使用弧度。",
+      "example": "π/4=1−1/3+1/5−1/7+…。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "反正切",
+        "展开"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-78",
+      "name": "几何级数展开",
+      "category": "泰勒展开",
+      "formula": "1/(1−x)=Σ(n=0…∞) xⁿ\n=1+x+x²+x³+…",
+      "description": "仅在 |x|<1 时成立；区间外不能当作收敛级数使用。",
+      "symbols": "将 x 替换为 −x，可得 1/(1+x) 的展开。",
+      "example": "1/(1+x)=1−x+x²−x³+…（|x|<1）。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "几何级数",
+        "展开"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-79",
+      "name": "泰勒近似的误差界",
+      "category": "泰勒展开",
+      "formula": "|Rₙ(x)| ≤ M|x−a|ⁿ⁺¹/(n+1)！",
+      "description": "拉格朗日余项条件成立，且在 a 与 x 之间 |f⁽ⁿ⁺¹⁾(t)|≤M。",
+      "symbols": "M：高阶导数绝对值的上界。",
+      "example": "sin x的二阶麦克劳林多项式仍为x，取n=2且|f‴|=|cos x|≤1，误差≤|x|³/6。|x|≤0.1时误差≤1/6000。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "误差",
+        "估计"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-80",
+      "name": "分部积分法",
+      "category": "积分与应用",
+      "formula": "∫ u dv=uv−∫ v du\n∫ₐᵇ uv′dx=[uv]ₐᵇ−∫ₐᵇ u′v dx",
+      "description": "定积分式的常用充分条件是 u、v 在 [a,b] 有连续一阶导数。不定积分等式两端相差的常数由积分常数吸收。",
+      "symbols": "du=u′dx；dv=v′dx。",
+      "example": "∫ x eˣdx=(x−1)eˣ+C。",
+      "tags": [
+        "高数",
+        "积分",
+        "分部积分"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-81",
+      "name": "第一类换元积分",
+      "category": "积分与应用",
+      "formula": "∫ f(φ(t))φ′(t)dt=F(φ(t))+C\n∫αᵝ f(φ(t))φ′(t)dt=∫φ(α)φ(β) f(x)dx",
+      "description": "F′=f；定积分式可在 φ 连续可导、f 在其值域连续的条件下使用。反解代换还需检查所取分支。",
+      "symbols": "x=φ(t)：代换；积分限须随之变化。",
+      "example": "∫ 2x cos(x²)dx=sin(x²)+C。",
+      "tags": [
+        "高数",
+        "积分",
+        "换元"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-82",
+      "name": "三角代换积分",
+      "category": "积分与应用",
+      "formula": "√(a²−x²)：x=a sin t\n√(a²+x²)：x=a tan t\n√(x²−a²)：x=a sec t",
+      "description": "a>0；按被积函数定义域选择使代换单调的区间。根式转化中的绝对值不能任意去掉。",
+      "symbols": "dx 也要同步代换。",
+      "example": "√(a²−x²) 中取 t∈[−π/2,π/2]，根式化为 a cos t。",
+      "tags": [
+        "高数",
+        "积分",
+        "三角代换"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-83",
+      "name": "指数与对数积分表",
+      "category": "积分与应用",
+      "formula": "∫ eˣdx=eˣ+C\n∫ aˣdx=aˣ/ln a+C\n∫ dx/x=ln|x|+C",
+      "description": "a>0、a≠1；第三式在不穿过 0 的区间上使用。",
+      "symbols": "C：积分常数。",
+      "example": "∫ e²ˣdx=e²ˣ/2+C。",
+      "tags": [
+        "高数",
+        "积分",
+        "基本积分表"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-84",
+      "name": "三角函数积分表",
+      "category": "积分与应用",
+      "formula": "∫ sin x dx=−cos x+C\n∫ cos x dx=sin x+C\n∫ sec²x dx=tan x+C\n∫ csc²x dx=−cot x+C",
+      "description": "角使用弧度，在各被积函数连续的区间上使用。",
+      "symbols": "sec=1/cos；csc=1/sin。",
+      "example": "∫ cos(3x)dx=sin(3x)/3+C。",
+      "tags": [
+        "高数",
+        "积分",
+        "三角函数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-85",
+      "name": "反三角型积分表",
+      "category": "积分与应用",
+      "formula": "∫ dx/(a²+x²)=(1/a)arctan(x/a)+C\n∫ dx/√(a²−x²)=arcsin(x/a)+C",
+      "description": "a>0；第二式要求 |x|<a。",
+      "symbols": "C：积分常数。",
+      "example": "∫ dx/(4+x²)=arctan(x/2)/2+C。",
+      "tags": [
+        "高数",
+        "积分",
+        "反三角函数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-86",
+      "name": "对数型根式积分",
+      "category": "积分与应用",
+      "formula": "∫ dx/√(x²+a²)=ln|x+√(x²+a²)|+C\n∫ dx/√(x²−a²)=ln|x+√(x²−a²)|+C",
+      "description": "a>0；第一式对所有实数 x，第二式在 x>a 或 x<−a 的区间上使用。",
+      "symbols": "C：每个连通定义区间上的积分常数。",
+      "example": "∫ dx/√(x²+1)=ln(x+√(x²+1))+C。",
+      "tags": [
+        "高数",
+        "积分",
+        "根式"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-87",
+      "name": "定积分对称性",
+      "category": "积分与应用",
+      "formula": "f 为奇函数：∫₋ₐᵃ f(x)dx=0\nf 为偶函数：∫₋ₐᵃ f(x)dx=2∫₀ᵃ f(x)dx",
+      "description": "a>0，f 在 [−a,a] 可积。反常积分不能仅凭奇对称判收敛。",
+      "symbols": "奇函数 f(−x)=−f(x)；偶函数 f(−x)=f(x)。",
+      "example": "∫₋₁¹ x³dx=0，∫₋₁¹ x²dx=2/3。",
+      "tags": [
+        "高数",
+        "定积分",
+        "对称性"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-88",
+      "name": "周期函数的定积分",
+      "category": "积分与应用",
+      "formula": "f(x+T)=f(x) ⇒ ∫ₐᵃ⁺ᵀ f(x)dx=∫₀ᵀ f(x)dx",
+      "description": "T>0，f 在每个有限区间可积。任意长度为一个周期的区间积分相同。",
+      "symbols": "T：周期。",
+      "example": "∫ₐᵃ⁺²π sin x dx=0。",
+      "tags": [
+        "高数",
+        "定积分",
+        "周期"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-89",
+      "name": "变上限积分求导",
+      "category": "积分与应用",
+      "formula": "d/dx ∫ₐˣ f(t)dt=f(x)\nd/dx ∫u(x)v(x) f(t)dt=f(v)v′−f(u)u′",
+      "description": "f 在有关区间连续，u、v 可导；被积函数仅依赖 t。若也显含 x，须加上关于 x 的偏导积分项。",
+      "symbols": "第二式中 f(v)、f(u) 指代入相应端点。",
+      "example": "d/dx ∫₀ˣ² cos t dt=2x cos(x²)。",
+      "tags": [
+        "高数",
+        "积分",
+        "变上限",
+        "求导"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-90",
+      "name": "反常积分的定义",
+      "category": "积分与应用",
+      "formula": "∫ₐ⁺∞ f(x)dx=lim(b→+∞)∫ₐᵇ f(x)dx",
+      "description": "有限极限存在才称收敛。全实轴积分须分别检查两个半轴；柯西主值存在不代表反常积分收敛。",
+      "symbols": "若端点为无界点，应从区间内侧取极限。",
+      "example": "∫₁⁺∞ dx/x²=1；∫₁⁺∞ dx/x 发散。",
+      "tags": [
+        "高数",
+        "反常积分",
+        "收敛"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-91",
+      "name": "反常积分 p 型判别",
+      "category": "积分与应用",
+      "formula": "∫₁⁺∞ x^(−p)dx 收敛 ⇔ p>1\n∫₀¹ x^(−p)dx 收敛 ⇔ p<1",
+      "description": "p 为实数，分别对应无穷远和端点无界情形，条件不同。",
+      "symbols": "等号 p=1 时两种积分均发散。",
+      "example": "∫₀¹ dx/√x=2，而 ∫₁⁺∞ dx/√x 发散。",
+      "tags": [
+        "高数",
+        "反常积分",
+        "p积分"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-92",
+      "name": "平面图形面积",
+      "category": "积分与应用",
+      "formula": "A=∫ₐᵇ |f(x)−g(x)|dx",
+      "description": "f、g 在 [a,b] 连续，图形由两曲线和两条端点竖线围成。若曲线相交，常按交点分段。",
+      "symbols": "A：面积，不是带符号的代数面积。",
+      "example": "y=x 与 y=x² 在 [0,1] 间面积为 ∫₀¹(x−x²)dx=1/6。",
+      "tags": [
+        "高数",
+        "积分应用",
+        "面积"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-93",
+      "name": "旋转体体积：垫片法",
+      "category": "积分与应用",
+      "formula": "V=π∫ₐᵇ [R(x)²−r(x)²]dx",
+      "description": "垂直旋转轴的截面为垫片，外半径 R≥内半径 r≥0。该式以 x 为沿轴坐标。",
+      "symbols": "R、r：到旋转轴的外、内半径。",
+      "example": "y=x（0≤x≤1）下方绕 x 轴旋转，V=π/3。",
+      "tags": [
+        "高数",
+        "积分应用",
+        "旋转体"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-94",
+      "name": "旋转体体积：柱壳法",
+      "category": "积分与应用",
+      "formula": "V=2π∫ₐᵇ ρ(x)h(x)dx",
+      "description": "平行旋转轴切片生成柱壳；ρ≥0 为壳半径，h≥0 为壳高。须避免重复计数并选择适当切片方向。",
+      "symbols": "ρ：到旋转轴的距离。",
+      "example": "y=x（0≤x≤1）下方绕 y 轴旋转，V=2π∫₀¹ x²dx=2π/3。",
+      "tags": [
+        "高数",
+        "积分应用",
+        "柱壳"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-95",
+      "name": "平面曲线弧长",
+      "category": "积分与应用",
+      "formula": "L=∫ₐᵇ √(1+[f′(x)]²)dx\nL=∫αᵝ √([x′(t)]²+[y′(t)]²)dt",
+      "description": "第一式 f 连续可导；第二式曲线分段连续可导并按参数走向计长，避免重复遍历。",
+      "symbols": "L：弧长；t：参数。",
+      "example": "单位圆参数 (cos t,sin t)，0≤t≤2π，弧长为 2π。",
+      "tags": [
+        "高数",
+        "积分应用",
+        "弧长"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-96",
+      "name": "旋转曲面面积",
+      "category": "积分与应用",
+      "formula": "S=2π∫ₐᵇ f(x)√(1+[f′(x)]²)dx",
+      "description": "f≥0 且连续可导，曲线 y=f(x) 绕 x 轴旋转。S 为曲面侧面积，不含额外端面。",
+      "symbols": "f(x)：到 x 轴的旋转半径。",
+      "example": "y=r（0≤x≤h）旋转成圆柱侧面，面积为 2πrh。",
+      "tags": [
+        "高数",
+        "积分应用",
+        "曲面面积"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-97",
+      "name": "级数收敛的必要条件",
+      "category": "无穷级数",
+      "formula": "Σ aₙ 收敛 ⇒ lim(n→∞)aₙ=0",
+      "description": "通项趋于 0 是必要条件而非充分条件；若通项极限非零或不存在，则级数发散。",
+      "symbols": "Σ aₙ 的收敛指部分和数列收敛。",
+      "example": "1/n→0，但调和级数 Σ1/n 发散。",
+      "tags": [
+        "高数",
+        "级数",
+        "通项"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-98",
+      "name": "p 级数判别",
+      "category": "无穷级数",
+      "formula": "Σ(n=1…∞) 1/nᵖ 收敛 ⇔ p>1",
+      "description": "p 为实数；p=1 是调和级数，发散。",
+      "symbols": "这是正项级数的常用比较基准。",
+      "example": "Σ1/n² 收敛，Σ1/√n 发散。",
+      "tags": [
+        "高数",
+        "级数",
+        "p级数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-99",
+      "name": "正项级数比较判别",
+      "category": "无穷级数",
+      "formula": "0≤aₙ≤bₙ：\nΣbₙ 收敛 ⇒ Σaₙ 收敛\nΣaₙ 发散 ⇒ Σbₙ 发散",
+      "description": "不等式只需从某一项以后成立；有限项不影响敛散性。",
+      "symbols": "aₙ、bₙ：非负通项。",
+      "example": "0≤1/(n²+1)≤1/n²，所以其级数收敛。",
+      "tags": [
+        "高数",
+        "级数",
+        "比较判别"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-100",
+      "name": "极限比较判别",
+      "category": "无穷级数",
+      "formula": "lim aₙ/bₙ=L，0<L<∞\n⇒ Σaₙ 与 Σbₙ 同敛散",
+      "description": "两列从某项起为正。L=0 或 +∞ 时只可使用相应单向推论，不能直接得出同敛散。",
+      "symbols": "L：有限正极限。",
+      "example": "[1/(n²+n)]/(1/n²)→1，所以 Σ1/(n²+n) 收敛。",
+      "tags": [
+        "高数",
+        "级数",
+        "极限比较"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-101",
+      "name": "达朗贝尔比值判别",
+      "category": "无穷级数",
+      "formula": "L=lim |aₙ₊₁/aₙ|\nL<1：绝对收敛；L>1：发散",
+      "description": "假设从某项起 aₙ≠0 且比值极限存在；L=1 时无法判定，L=+∞ 时发散。",
+      "symbols": "先对通项取绝对值，也可用于非正项级数。",
+      "example": "aₙ=1/n!，比值为 1/(n+1)→0，故收敛。",
+      "tags": [
+        "高数",
+        "级数",
+        "比值判别",
+        "达朗贝尔"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-102",
+      "name": "柯西根值判别",
+      "category": "无穷级数",
+      "formula": "L=limsup(n→∞) |aₙ|^(1/n)\nL<1：绝对收敛；L>1：发散",
+      "description": "可使用上极限版本，不要求普通极限存在；L=1 时不能判定。",
+      "symbols": "limsup：上极限；n 次根取非负实根。",
+      "example": "aₙ=(n/(2n+1))ⁿ，根值趋于 1/2，故收敛。",
+      "tags": [
+        "高数",
+        "柯西",
+        "Cauchy",
+        "级数",
+        "根值判别"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-103",
+      "name": "积分判别法",
+      "category": "无穷级数",
+      "formula": "Σ(n=N…∞) f(n) 与 ∫ᴺ⁺∞ f(x)dx 同敛散",
+      "description": "f 在 [N,+∞) 连续、非负且单调不增。两者同敛散，不表示它们的值相同。",
+      "symbols": "N：正整数起点。",
+      "example": "Σ(n=2…∞)1/[n(ln n)²] 收敛。",
+      "tags": [
+        "高数",
+        "级数",
+        "积分判别"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-104",
+      "name": "莱布尼茨交错级数判别",
+      "category": "无穷级数",
+      "formula": "bₙ≥0、bₙ 单调不增、bₙ→0\n⇒ Σ(−1)ⁿ⁻¹bₙ 收敛，|Rₙ|≤bₙ₊₁",
+      "description": "余项界需对应此单调条件。收敛可能是条件收敛，不一定绝对收敛。",
+      "symbols": "Rₙ：总和减去前 n 项和。",
+      "example": "交错调和级数收敛于 ln 2，前 n 项误差≤1/(n+1)。",
+      "tags": [
+        "高数",
+        "级数",
+        "交错",
+        "莱布尼茨"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-105",
+      "name": "绝对收敛与条件收敛",
+      "category": "无穷级数",
+      "formula": "Σ|aₙ| 收敛 ⇒ Σaₙ 收敛",
+      "description": "若 Σaₙ 收敛但 Σ|aₙ| 发散，则称条件收敛。条件收敛级数不能任意重排而保持和不变。",
+      "symbols": "绝对收敛比一般收敛更强。",
+      "example": "Σ(−1)ⁿ⁻¹/n 条件收敛，Σ1/n² 绝对收敛。",
+      "tags": [
+        "高数",
+        "级数",
+        "绝对收敛",
+        "条件收敛"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-106",
+      "name": "幂级数收敛半径",
+      "category": "无穷级数",
+      "formula": "Σ cₙ(x−a)ⁿ：R=1/limsup |cₙ|^(1/n)",
+      "description": "|x−a|<R 绝对收敛，|x−a|>R 发散；边界 x=a±R 必须分别检查。约定 1/0=∞、1/∞=0。",
+      "symbols": "R：收敛半径；a：中心。",
+      "example": "Σxⁿ/n 的 R=1；x=1 发散，x=−1 条件收敛。",
+      "tags": [
+        "高数",
+        "幂级数",
+        "收敛半径"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-107",
+      "name": "幂级数逐项求导与积分",
+      "category": "无穷级数",
+      "formula": "d/dx Σ cₙ(x−a)ⁿ=Σ(n≥1) n cₙ(x−a)ⁿ⁻¹\n∫ Σ cₙ(x−a)ⁿdx=Σ cₙ(x−a)ⁿ⁺¹/(n+1)+C",
+      "description": "在收敛半径内部成立；求导和积分后的收敛半径相同，但端点敛散性可能改变。",
+      "symbols": "须先确定原幂级数收敛半径。",
+      "example": "由几何级数逐项求导得 1/(1−x)²=Σ(n≥1)nxⁿ⁻¹（|x|<1）。",
+      "tags": [
+        "高数",
+        "幂级数",
+        "逐项求导",
+        "逐项积分"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-108",
+      "name": "傅里叶级数系数",
+      "category": "无穷级数",
+      "formula": "f(x)∼a₀/2+Σ(n≥1)[aₙcos(nx)+bₙsin(nx)]\naₙ=(1/π)∫₋ππ f(x)cos(nx)dx\nbₙ=(1/π)∫₋ππ f(x)sin(nx)dx",
+      "description": "f 为 2π 周期、可积函数时可定义系数。若满足常用狄利克雷条件（分段光滑即可），级数收敛于 [f(x−)+f(x+)]/2；此处 ∼ 表示对应级数，不是等价无穷小。",
+      "symbols": "a₀ 按 n=0 的余弦系数公式计算。",
+      "example": "奇函数的 aₙ 全为 0；偶函数的 bₙ 全为 0。",
+      "tags": [
+        "高数",
+        "傅里叶",
+        "Fourier",
+        "级数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-109",
+      "name": "多元函数全微分",
+      "category": "多元微积分",
+      "formula": "dz=fₓdx+fᵧdy",
+      "description": "z=f(x,y) 在所求点可微；一个常见充分条件是偏导数在点的邻域存在并在点连续。仅有偏导存在不足以保证可微。",
+      "symbols": "fₓ、fᵧ：一阶偏导。",
+      "example": "f=x²y，则 df=2xy dx+x²dy。",
+      "tags": [
+        "高数",
+        "多元函数",
+        "全微分"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-110",
+      "name": "多元复合函数链式法则",
+      "category": "多元微积分",
+      "formula": "z=f(x(t),y(t))\ndz/dt=fₓ·x′(t)+fᵧ·y′(t)",
+      "description": "f 在对应点可微，x(t)、y(t) 可导。",
+      "symbols": "偏导数须在 (x(t),y(t)) 处取值。",
+      "example": "z=x²+y²，x=t、y=t²，则 dz/dt=2t+4t³。",
+      "tags": [
+        "高数",
+        "多元函数",
+        "链式法则"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-111",
+      "name": "方向导数与梯度",
+      "category": "多元微积分",
+      "formula": "Dᵤf=∇f·u\n∇f=(fₓ,fᵧ,f_z)",
+      "description": "f 在该点可微，u 必须是单位方向向量。最大方向导数为 |∇f|；梯度非零时在其方向取得。",
+      "symbols": "二维函数去掉 f_z 分量。",
+      "example": "f=x²+y² 在 (1,0) 的梯度为 (2,0)，最大方向导数为 2。",
+      "tags": [
+        "高数",
+        "方向导数",
+        "梯度"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-112",
+      "name": "混合偏导相等定理",
+      "category": "多元微积分",
+      "formula": "fₓᵧ=fᵧₓ",
+      "description": "若两种二阶混合偏导在点的邻域存在且连续，则交换求导次序结果相同。不能仅凭存在就任意交换。",
+      "symbols": "fₓᵧ：先对 x 求偏导，再对 y 求偏导。",
+      "example": "f=x²y³，两种混合偏导均为 6xy²。",
+      "tags": [
+        "高数",
+        "偏导数",
+        "施瓦茨",
+        "Schwarz"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-113",
+      "name": "二元泰勒公式：二阶",
+      "category": "多元微积分",
+      "formula": "f(a+h,b+k)=f(a,b)+fₓh+fᵧk\n+(fₓₓh²+2fₓᵧhk+fᵧᵧk²)/2+o(h²+k²)",
+      "description": "f 在 (a,b) 的邻域有连续二阶偏导；(h,k)→(0,0)。右端所有偏导在 (a,b) 取值。",
+      "symbols": "h、k：坐标增量。",
+      "example": "f=e^(x+y) 在 (0,0) 展开为 1+x+y+(x+y)²/2+o(x²+y²)。",
+      "tags": [
+        "高数",
+        "泰勒",
+        "多元函数",
+        "二阶"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-114",
+      "name": "二元函数极值判别",
+      "category": "多元微积分",
+      "formula": "驻点处令 D=fₓₓfᵧᵧ−fₓᵧ²\nD>0、fₓₓ>0：极小；D>0、fₓₓ<0：极大\nD<0：鞍点；D=0：未定",
+      "description": "f 在驻点邻域有连续二阶偏导；先满足 fₓ=fᵧ=0，再使用判别。边界和约束极值须另外处理。",
+      "symbols": "D：海森矩阵行列式。",
+      "example": "x²+y² 在原点极小；x²−y² 在原点为鞍点。",
+      "tags": [
+        "高数",
+        "多元极值",
+        "海森",
+        "Hessian"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-115",
+      "name": "拉格朗日乘数法",
+      "category": "多元微积分",
+      "formula": "∇f=λ∇g，且 g(x,y,…)=0",
+      "description": "f、g在候选点邻域连续可微，等式约束g=0且∇g≠0时，局部极值必须满足乘子条件。还须检查约束不正则点、边界，并比较或判别候选点。",
+      "symbols": "λ：拉格朗日乘子。",
+      "example": "x²+y²=1 下，x+y 的最大值为 √2、最小值为 −√2。",
+      "tags": [
+        "高数",
+        "条件极值",
+        "拉格朗日",
+        "乘数法"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-116",
+      "name": "二重积分化为累次积分",
+      "category": "多元微积分",
+      "formula": "∬ᴰ f(x,y)dA=∫ₐᵇ dx∫φ₁(x)φ₂(x) f(x,y)dy",
+      "description": "D={(x,y):a≤x≤b,φ₁(x)≤y≤φ₂(x)}；常用条件为边界分段光滑、f 连续。换序须重新描述积分区域。",
+      "symbols": "先计算内层关于 y 的积分。",
+      "example": "D=[0,1]×[0,2]，∬ᴰ x dA=1。",
+      "tags": [
+        "高数",
+        "二重积分",
+        "累次积分"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-117",
+      "name": "二重积分极坐标变换",
+      "category": "多元微积分",
+      "formula": "x=r cosθ，y=r sinθ\ndA=r dr dθ",
+      "description": "r≥0，需将原区域和被积函数一同变换，并选择覆盖区域一次的参数范围。",
+      "symbols": "r：极径；θ：极角，使用弧度。",
+      "example": "半径 R 的圆盘面积为 ∫₀²πdθ∫₀ᴿ r dr=πR²。",
+      "tags": [
+        "高数",
+        "二重积分",
+        "极坐标",
+        "雅可比"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-118",
+      "name": "多重积分换元：雅可比",
+      "category": "多元微积分",
+      "formula": "dx dy=|∂(x,y)/∂(u,v)|du dv",
+      "description": "换元在区域内部为一一对应的连续可微变换，雅可比非零；通常允许边界等测度为零的例外。三维使用三阶行列式。",
+      "symbols": "必须取雅可比行列式的绝对值。",
+      "example": "x=2u、y=3v 时 dxdy=6dudv。",
+      "tags": [
+        "高数",
+        "多重积分",
+        "换元",
+        "Jacobian"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-119",
+      "name": "三重积分：柱坐标与球坐标",
+      "category": "多元微积分",
+      "formula": "柱坐标：dV=r dr dθ dz\n球坐标：dV=ρ²sinφ dρ dφ dθ",
+      "description": "柱坐标 x=r cosθ、y=r sinθ；球坐标 x=ρsinφcosθ、y=ρsinφsinθ、z=ρcosφ，ρ≥0，0≤φ≤π。",
+      "symbols": "φ：与正 z 轴的夹角；θ：方位角。",
+      "example": "半径 R 的球体积为 ∫₀²πdθ∫₀πsinφdφ∫₀ᴿρ²dρ=4πR³/3。",
+      "tags": [
+        "高数",
+        "三重积分",
+        "球坐标",
+        "柱坐标"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-120",
+      "name": "隐曲面的切平面与法线",
+      "category": "多元微积分",
+      "formula": "切平面：Fₓ(x−x₀)+Fᵧ(y−y₀)+F_z(z−z₀)=0\n法线：(x,y,z)=(x₀,y₀,z₀)+t∇F",
+      "description": "曲面 F(x,y,z)=0，F 连续可微，且在所求点 ∇F≠0；偏导均在该点取值。",
+      "symbols": "梯度给出曲面的法向量。",
+      "example": "x²+y²+z²=1 在 (1,0,0) 的切平面为 x=1。",
+      "tags": [
+        "高数",
+        "空间曲面",
+        "切平面",
+        "法线"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-121",
+      "name": "可分离变量微分方程",
+      "category": "微分方程",
+      "formula": "y′=p(x)q(y)\n∫ dy/q(y)=∫ p(x)dx+C",
+      "description": "在 q(y)≠0 的区间分离变量；q(y)=0 给出的常值解必须另行保留，不能因除法丢失。",
+      "symbols": "y′=dy/dx。",
+      "example": "y′=xy，解为 y=C e^(x²/2)，包含 C=0 的零解。",
+      "tags": [
+        "高数",
+        "微分方程",
+        "分离变量"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-122",
+      "name": "一阶线性微分方程",
+      "category": "微分方程",
+      "formula": "y′+P(x)y=Q(x)\ny=e^(−∫Pdx)[∫ Qe^(∫Pdx)dx+C]",
+      "description": "P、Q 在所讨论区间连续；各次不定积分的常数可统一吸收到 C。",
+      "symbols": "e^(∫Pdx)：积分因子。",
+      "example": "y′+y=1 的通解为 y=1+C e^(−x)。",
+      "tags": [
+        "高数",
+        "微分方程",
+        "一阶线性",
+        "积分因子"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-123",
+      "name": "伯努利微分方程",
+      "category": "微分方程",
+      "formula": "y′+Py=Qyⁿ\nz=y^(1−n) ⇒ z′+(1−n)Pz=(1−n)Q",
+      "description": "n≠0、1；在幂有定义且 y≠0 的区间代换。y=0 是否为解须检查原方程，不能直接丢失。",
+      "symbols": "n=0、1 时原方程本身是线性方程。",
+      "example": "y′+y=y²，取 z=1/y，得到 z′−z=−1。",
+      "tags": [
+        "高数",
+        "微分方程",
+        "伯努利",
+        "Bernoulli"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-124",
+      "name": "二阶常系数齐次方程",
+      "category": "微分方程",
+      "formula": "y″+py′+qy=0；特征方程 r²+pr+q=0\n异实根：y=C₁e^(r₁x)+C₂e^(r₂x)\n重根 r：y=(C₁+C₂x)e^(rx)",
+      "description": "p、q 为实常数。复根 α±iβ 时通解为 e^(αx)[C₁cos(βx)+C₂sin(βx)]。",
+      "symbols": "C₁、C₂：任意实常数。",
+      "example": "y″−y=0：y=C₁eˣ+C₂e^(−x)；y″+y=0：y=C₁cos x+C₂sin x。",
+      "tags": [
+        "高数",
+        "微分方程",
+        "特征方程"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-125",
+      "name": "线性非齐次方程解的结构",
+      "category": "微分方程",
+      "formula": "y=yₕ+yₚ",
+      "description": "线性微分方程的通解等于对应齐次方程的通解，加原非齐次方程的一个特解。在系数连续且最高阶系数非零的区间使用。",
+      "symbols": "yₕ：齐次通解；yₚ：一个特解。",
+      "example": "y″−y=1，取 yₚ=−1，通解 y=C₁eˣ+C₂e^(−x)−1。",
+      "tags": [
+        "高数",
+        "微分方程",
+        "非齐次",
+        "叠加"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-126",
+      "name": "第一类与第二类曲线积分",
+      "category": "曲线与曲面积分",
+      "formula": "∫ᴸ f ds=∫αᵝ f(r(t))|r′(t)|dt\n∫ᴸ F·dr=∫αᵝ F(r(t))·r′(t)dt",
+      "description": "曲线分段光滑，被积函数在曲线上连续。第一类与方向无关；第二类反向后变号。参数范围按给定走向取定。",
+      "symbols": "r(t)：参数曲线；ds：弧长微元。",
+      "example": "沿单位圆一周 ∫ᴸ1ds=2π；反向不变。",
+      "tags": [
+        "高数",
+        "曲线积分",
+        "第一类",
+        "第二类"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-127",
+      "name": "格林公式",
+      "category": "曲线与曲面积分",
+      "formula": "∮∂D Pdx+Qdy=∬ᴰ (Qₓ−Pᵧ)dA",
+      "description": "D 为有界平面区域，边界分段光滑；P、Q 在包含闭区域的开集有连续一阶偏导。边界取正向：外边界逆时针，孔洞边界顺时针。",
+      "symbols": "∂D：完整的定向边界；Green 公式。",
+      "example": "单位圆逆时针边界上 ∮(−y dx+x dy)=2π。",
+      "tags": [
+        "高数",
+        "格林",
+        "Green",
+        "曲线积分"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-128",
+      "name": "斯托克斯公式",
+      "category": "曲线与曲面积分",
+      "formula": "∮∂S F·dr=∬ˢ (∇×F)·n dS",
+      "description": "S 为可定向分段光滑曲面，F 在包含 S 的开集有连续一阶偏导；边界方向须与法向满足右手规则。",
+      "symbols": "∇×F：旋度；n：单位法向；Stokes 公式。",
+      "example": "xy 平面内单位圆盘取向上法向，正向边界为逆时针。",
+      "tags": [
+        "高数",
+        "斯托克斯",
+        "Stokes",
+        "曲面积分"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-129",
+      "name": "高斯散度公式",
+      "category": "曲线与曲面积分",
+      "formula": "∯∂V F·n dS=∭ⱽ (∇·F)dV",
+      "description": "V 为有界空间区域，闭合边界分段光滑，法向取外侧；F 在包含闭区域的开集有连续一阶偏导。",
+      "symbols": "∇·F：散度；又称 Gauss 或 divergence theorem。",
+      "example": "F=(x,y,z) 的散度为 3，故向外通量为 3 倍区域体积。",
+      "tags": [
+        "高数",
+        "高斯",
+        "Gauss",
+        "散度",
+        "曲面积分"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    },
+    {
+      "id": "builtin-130",
+      "name": "保守场与积分路径无关",
+      "category": "曲线与曲面积分",
+      "formula": "F=∇φ ⇒ ∫ᴸ F·dr=φ(B)−φ(A)",
+      "description": "φ 连续可微且曲线从 A 到 B，位于其定义域内。若用旋度为零反推保守场，还需例如单连通开域及 F 连续可微等条件。",
+      "symbols": "φ：势函数；A、B：起点、终点。",
+      "example": "F=(2x,2y)，势函数 φ=x²+y²；从 (0,0) 到 (1,1) 的积分为 2。",
+      "tags": [
+        "高数",
+        "曲线积分",
+        "路径无关",
+        "势函数"
+      ],
+      "custom": false,
+      "createdAt": 0,
+      "updatedAt": 0
+    }
+  ],
+  "favorites": [],
+  "trash": [],
+  "description": "100 条高数公式、定理与判别法；可通过公式集的导入公式功能合并。"
+}
